@@ -13,7 +13,7 @@ const ProjectsPage = () => {
 
     return (
         <div className='projectsPage'>
-            <h3>Choose a language.</h3>
+            <h3 className='helperTitle'>Choose a language.</h3>
             <LogoWheel parentPipe={handleDataRecieved}/>
             <ProjectCards language={language} />
         </div>

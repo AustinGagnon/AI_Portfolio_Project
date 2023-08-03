@@ -1,9 +1,9 @@
 .projectCards {
-    margin: 35px 0px;
+    display: flex;
+    flex-direction: column;
     padding: 10px 0px;
     border-radius: 10px;
     color: var(--div-text-color);
-    /* background-color: aqua; */
 }
 
 .languageTitle {
@@ -12,9 +12,19 @@
 }
 
 .subCard {
+    display: flex;
+    flex-direction: column;
     background-color: var(--div-color);
     box-shadow: 6px 6px 5px rgba(0, 0, 0, 0.1);
-    padding: 2px 30px 10px;
+    padding: 30px;
+    border-radius: 17px;
     margin: 10px 0px;
-    border-radius: 10px;
+}
+
+.projectTitle {
+    margin: 10px 0px 0px;
+}
+
+.projectYear {
+    margin: 2px;
 }

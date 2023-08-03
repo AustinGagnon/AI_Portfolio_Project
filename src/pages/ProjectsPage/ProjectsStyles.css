@@ -1,13 +1,13 @@
 .projectsPage {
     width: 100%;
     /* background-color: blue; */
-    padding: 35px 25px;
+    padding: 25px 0px;
     display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     
 }
 
-h3 {
+.helperTitle {
     color: var(--text-color);
     grid-column: 2;
     text-align: center;
@@ -22,9 +22,15 @@ h3 {
     grid-column: 2;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1400px) {
     .projectsPage {
-        grid-template-columns: 1fr 50fr 1fr;
+        grid-template-columns: 1fr 10fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .projectsPage {
+        grid-template-columns: 1fr 40fr 1fr;
     }
 }
     

@@ -30,7 +30,7 @@ const LogoWheel: React.FC<logoWheelProps> = (props) => {
             <img className='logoBtn' onClick={handleButtonClick} src={csharpImage} alt="C#" />
             <img className='logoBtn' onClick={handleButtonClick} src={nodeImage} alt="Node.JS" />
             <img className='logoBtn' onClick={handleButtonClick} src={fbaseImage} alt="Firebase" />
-            <img className='logoBtn' onClick={handleButtonClick} src={dotNetImage} alt=".NET Framework" />
+            {/* <img className='logoBtn' onClick={handleButtonClick} src={dotNetImage} alt=".NET Framework" /> */}
         </div>
     );
 };
