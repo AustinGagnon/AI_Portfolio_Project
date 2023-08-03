@@ -1,0 +1,7 @@
+/* Base styles */
+.HomePage {
+    width: 100%;
+    height: 100px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+}

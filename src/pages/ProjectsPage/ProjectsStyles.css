@@ -1,0 +1,30 @@
+.projectsPage {
+    width: 100%;
+    /* background-color: blue; */
+    padding: 35px 25px;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    
+}
+
+h3 {
+    color: var(--text-color);
+    grid-column: 2;
+    text-align: center;
+    margin: 0px 0px 25px 0px;
+}
+
+.logoWheel {
+    grid-column: 2;
+}
+
+.projectCards {
+    grid-column: 2;
+}
+
+@media screen and (max-width: 768px) {
+    .projectsPage {
+        grid-template-columns: 1fr 50fr 1fr;
+    }
+}
+    
