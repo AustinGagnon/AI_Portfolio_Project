@@ -7,20 +7,23 @@ import ToggleDarkMode from './components/ToggleDarkMode/ToggleDarkMode';
 import ProjectsPage from './pages/ProjectsPage/Index';
 import './App.css'
 
-function App() {
+interface AppProps {
+  pageName: string,
+}
+
+const App: React.FC<AppProps> = (props)=> {
 
   return (
     
     <div className='mainContainer'>
       <Header/>
       <ToggleDarkMode />
-      {/* <GamePage /> */}
-      <ProjectsPage />
-      {/* <HomePage /> */}
+      {props.pageName === "Home" && <ProjectsPage />}
+      // <ProjectsPage />
     </div>
     
     
   )
 }
 
-export default App
+export default App;
