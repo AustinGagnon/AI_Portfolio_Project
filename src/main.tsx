@@ -16,6 +16,10 @@ const router = createBrowserRouter([
   {
     path: "/projects",
     element: <App pageName='Projects' />,
+  },
+  {
+    path: "/favicon.ico",
+    element: <App pageName='Home' />,
   }
 ]);
 
