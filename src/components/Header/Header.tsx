@@ -1,8 +1,4 @@
-import React from 'react';
-// import LogInBtn from './LogInBtn';
 import './Header.css';
-// import LogInBtn from './LogInBtn';
-
 
 
 const Header = () => {

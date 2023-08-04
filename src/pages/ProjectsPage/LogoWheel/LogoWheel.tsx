@@ -5,7 +5,7 @@ import pyImage from '../../../assets/LanguageLogos/Python.png';
 import csharpImage from '../../../assets/LanguageLogos/CSharp.png';
 import nodeImage from '../../../assets/LanguageLogos/NodeJS.png';
 import fbaseImage from '../../../assets/LanguageLogos/Firebase.png';
-import dotNetImage from '../../../assets/LanguageLogos/DotNet.png';
+// import dotNetImage from '../../../assets/LanguageLogos/DotNet.png';
 import './LogoStyles.css'
 
 

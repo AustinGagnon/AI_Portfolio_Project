@@ -17,12 +17,12 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     return (
         <>
             <div className="carousel-container" onClick={nextImage}>
-                {images.map((image, index) => (
+                {images.map((image: string, index: number) => (
                     <div
                         key={index}
                         className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
                     >
-                        <img height={400} src={getAsset(image)} alt={`Image ${index}`} />
+                        <img height={400} src={getAsset(image) ?? ''} alt={`Image ${index}`} />
                     </div>
                 ))}
             </div>
