@@ -10,6 +10,10 @@ import './index.css'
 
 const router = createBrowserRouter([
   {
+    path: "",
+    element: <App pageName='Home' />,
+  },
+  {
     path: "/",
     element: <App pageName='Home' />,
   },

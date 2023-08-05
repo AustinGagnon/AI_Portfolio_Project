@@ -19,10 +19,7 @@ const App: React.FC<AppProps> = (props)=> {
       <Header/>
       <ToggleDarkMode />
       {props.pageName === "Home" && <ProjectsPage />}
-      // <ProjectsPage />
     </div>
-    
-    
   )
 }
 
