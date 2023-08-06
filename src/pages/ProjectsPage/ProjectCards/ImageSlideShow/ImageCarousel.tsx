@@ -17,16 +17,11 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     return (
         <>
             <div className="carousel-container" onClick={nextImage}>
-                {images.map((image: string, index: number) => (
-                    <div
-                        key={index}
-                        className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
-                    >
-                        <img height={400} src={getAsset(image) ?? ''} alt={`Image ${index}`} />
-                    </div>
-                ))}
+                <div className='imageFrame'>
+                    <img className='projectImage' width={400} src={getAsset(images[currentIndex]) ?? ''} alt={`Image ${currentIndex}`} />
+                </div>
             </div>
-            {images.length > 1 ? <p className='clickToScroll'>Click to Scroll</p> : null}
+            <p className='imageCount'>{currentIndex + 1} / {images.length}</p>
         </>
         
     );
