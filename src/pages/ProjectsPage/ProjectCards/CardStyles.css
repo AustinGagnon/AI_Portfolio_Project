@@ -1,7 +1,7 @@
 .projectCards {
     display: flex;
     flex-direction: column;
-    padding: 10px 0px;
+    padding: 10px 10px;
     border-radius: 10px;
     color: var(--div-text-color);
 }

@@ -25,7 +25,7 @@ const LogoWheel: React.FC<logoWheelProps> = (props) => {
     return (
         <div className='logoWheel'>
             <img className='logoBtn' onClick={handleButtonClick} src={jsImage} alt="JavaScript"/>
-            <img className='logoBtn' onClick={handleButtonClick} src={javaImage} alt="Java" />
+            {/* <img className='logoBtn' onClick={handleButtonClick} src={javaImage} alt="Java" /> */}
             <img className='logoBtn' onClick={handleButtonClick} src={pyImage} alt="Python" />
             <img className='logoBtn' onClick={handleButtonClick} src={csharpImage} alt="C#" />
             <img className='logoBtn' onClick={handleButtonClick} src={nodeImage} alt="Node.JS" />

@@ -20,9 +20,9 @@ const BioPage = () => {
                         and data science.
                     </p>
                     <p>
-                        When I'm not coding, I'm usually spending time with my two kids and wife. I also enjoy playing and writing music and playing board games with friends.
+                        When I'm not coding, I'm usually spending time with my wife and two kids . I also enjoy playing and writing music and playing games with friends.
                     </p>
-                    <p>I'm currenty open for a position as a software engineer</p>
+                    <p>I'm currenty open for a position as a software engineer.</p>
 
                 </div>
                 

@@ -18,7 +18,7 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
         <>
             <div className="carousel-container" onClick={nextImage}>
                 <div className='imageFrame'>
-                    <img className='projectImage' width={400} src={getAsset(images[currentIndex]) ?? ''} alt={`Image ${currentIndex}`} />
+                    <img className='projectImage'   src={getAsset(images[currentIndex]) ?? ''} alt={`Image ${currentIndex}`} />
                 </div>
             </div>
             <p className='imageCount'>{currentIndex + 1} / {images.length}</p>

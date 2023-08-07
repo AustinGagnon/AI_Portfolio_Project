@@ -1,8 +1,8 @@
 .logoWheel {
-    /* background-color: aquamarine; */
     display: flex;    
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    padding: 0px 10px;
 }
 
 .logoBtn {
@@ -24,4 +24,19 @@
     transform: scale(1.0);
     transition: transform 0.2s;
 }
+
+@media screen and (max-width: 800px) {
+    .logoBtn {
+        height: 50px;
+        width: 50px;
+    }
+}
+    
+@media screen and (max-width: 550px) {
+    .logoBtn {
+        height: 45px;
+        width: 45px;
+    }
+}
+
 
