@@ -39,9 +39,6 @@ export const getAsset = (assetName: string) => {
             return JavaScript_LavaLamp4;
         case 'Python_MNIST':
             return Python_MNIST;
-
-        case 'Github_ICON':
-            return Github_ICON;
         default:
             return null;
     }

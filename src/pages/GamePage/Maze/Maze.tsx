@@ -20,6 +20,7 @@ const Maze: React.FC = () => {
                 (
                     <div key={i}>
                         {row.map((cell, j) => {
+                            console.log(cell);
                             return (
                                 <div id={"cell_" + i + "_" + j} className={"maze_cell"} key={j}>
                                     
