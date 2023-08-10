@@ -5,6 +5,7 @@ import ToggleDarkMode from './components/ToggleDarkMode/ToggleDarkMode';
 import HomePage from './pages/HomePage/Index';
 import BioPage from './pages/BioPage/Index';
 import ProjectsPage from './pages/ProjectsPage/Index';
+import GamePage from './pages/GamePage/Index';
 import './App.css'
 
 interface AppProps {
@@ -21,6 +22,7 @@ const App: React.FC<AppProps> = (props)=> {
       {props.pageName === "Home" && <HomePage />}
       {props.pageName === "Projects" && <ProjectsPage />}
       {props.pageName === "Bio" && <BioPage />}
+      {props.pageName === "Game" && <GamePage />}
     </div>
   )
 }

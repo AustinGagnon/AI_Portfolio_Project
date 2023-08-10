@@ -10,7 +10,7 @@
 .imageFrame {
     width: 400px;
     height: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
     overflow: hidden;
     background-color: black;
 }

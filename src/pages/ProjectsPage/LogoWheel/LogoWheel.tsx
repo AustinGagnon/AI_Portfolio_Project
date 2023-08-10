@@ -1,6 +1,6 @@
 import React from 'react';
 import jsImage from '../../../assets/LanguageLogos/JavaScript.png';
-import javaImage from '../../../assets/LanguageLogos/Java.png';
+// import javaImage from '../../../assets/LanguageLogos/Java.png';
 import pyImage from '../../../assets/LanguageLogos/Python.png';
 import csharpImage from '../../../assets/LanguageLogos/CSharp.png';
 import nodeImage from '../../../assets/LanguageLogos/NodeJS.png';

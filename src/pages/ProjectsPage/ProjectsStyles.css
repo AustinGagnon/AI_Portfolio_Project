@@ -34,6 +34,18 @@
         grid-template-columns: 1fr;
     }
 
+    .logoWheel {
+        grid-column: 1;
+    }
+
+    .projectCards {
+        grid-column: 1;
+    }
+
+    .helperTitle {
+        grid-column: 1;
+    }
+
     .languageTitle {
         text-align: center;
     }

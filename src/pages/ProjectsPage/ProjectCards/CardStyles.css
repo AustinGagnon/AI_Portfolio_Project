@@ -28,3 +28,17 @@
 .projectYear {
     margin: 2px;
 }
+
+.gitHubBG {
+    background-color: #d3d3d3;
+    width: 55px;
+    display: flex;
+    padding: 4px 5px;
+    border-radius: 10px;
+    margin: 15px 0px 0px 0px;
+}
+
+.gitHubBG > img {
+    margin: auto;
+    width: 35px
+}

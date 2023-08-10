@@ -11,8 +11,6 @@ import JavaScript_Lightning1 from '../assets/ProjectAssets/JavaScript/Lightning1
 import JavaScript_Lightning2 from '../assets/ProjectAssets/JavaScript/Lightning2.png';
 import JavaScript_Lightning3 from '../assets/ProjectAssets/JavaScript/Lightning3.png';
 
-import Github_ICON from '../assets/LanguageLogos/250px_ICON/Github_ICON.png';
-
 import Python_MNIST from '../assets/ProjectAssets/Python/Python_MNIST.png';
 
 export const getAsset = (assetName: string) => {

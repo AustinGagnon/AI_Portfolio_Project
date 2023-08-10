@@ -28,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/bio",
     element: <App pageName='Bio' />,
+  },
+  {
+    path: "/game",
+    element: <App pageName='Game' />,
   }
 ]);
 

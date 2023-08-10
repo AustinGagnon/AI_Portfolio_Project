@@ -1,0 +1,46 @@
+.maze_container {
+    /* background-color: orange; */
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 500px;
+    padding: 0;
+    margin: 0;
+}
+
+.maze_cell {
+    background-color: var(--div-bg-color);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--bg-color);
+
+    margin: 0;
+    padding: 0;
+}
+
+.top_wall {
+    border-top: 1px solid var(--text-color);
+}
+
+.right_wall {
+    border-right: 1px solid var(--text-color);
+}
+
+.bottom_wall {
+    border-bottom: 1px solid var(--text-color);
+}
+
+.left_wall {
+    border-left: 1px solid var(--text-color);
+}
+
+.start {
+    background-color: green;
+}
+
+.end {
+    background-color: red;
+}
