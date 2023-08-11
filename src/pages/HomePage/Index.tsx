@@ -15,7 +15,7 @@ const HomePage: React.FC = () => {
             <div className='contentContainer'>
                 <h1>Thank you for visiting my site.</h1>
                 <h1>It's currently under construction.</h1>
-                <a href="/Projects"><h1>Click to see my projects.</h1></a>
+                <a className='projectLink'  href="/Projects"><h1 >Click to see my projects.</h1></a>
             </div>
         </div>
     );

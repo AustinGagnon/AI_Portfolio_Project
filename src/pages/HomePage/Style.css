@@ -22,6 +22,18 @@
     /* Animation transition */
 }
 
+.projectLink {
+    color: var(--div-text-color);
+    text-decoration-color: var(--div-text-color);
+    transition: color 0.3s ease;
+}
+
+.projectLink:hover {
+    color: rgb(18, 18, 54);
+    text-decoration: solid underline blue;
+    transition: color 1s ease, text-decoration-color 1s ease;
+}
+
 /* Animation when content becomes visible */
 .homePage.animate .contentContainer {
     opacity: 1;

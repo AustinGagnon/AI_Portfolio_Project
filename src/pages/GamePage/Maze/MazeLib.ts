@@ -1,3 +1,10 @@
+// Class to create maze in 2d integer array. Each cell will be given a 5 bit mask to represent walls and visited status.
+// 1st bit: top wall (most significant bit)
+// 2nd bit: right wall
+// 3rd bit: bottom wall
+// 4th bit: left wall
+// 5th bit: visited status (least significant bit)
+
 class MazeLib {
     private maze : number[][];
     private row : number;
@@ -19,7 +26,9 @@ class MazeLib {
             }
             this.maze.push(row);
         }
+        // Create borders around edge of maze
         this.borderMasks();
+        // Place starting and ending points
         this.keyPoints();
     }
 

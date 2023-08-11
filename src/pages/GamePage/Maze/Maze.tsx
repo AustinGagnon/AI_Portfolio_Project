@@ -3,20 +3,18 @@ import MazeLib from './MazeLib'
 import './MazeStyle.css';
 
 const Maze: React.FC = () => {
-    const mazeSize = 15;
-    const [maze, setMaze] = useState<number[][]>([]);
+    const [maze] = useState<MazeLib>(new MazeLib(15, 15));
+    const [array2D] = useState<number[][]>(maze.getMaze());
+    const [step, setStep] = useState<number>(0);
 
     useEffect(() => {
-        const maze = new MazeLib(mazeSize, mazeSize);
         maze.drawMaze();
-        setMaze(maze.getMaze());
-        console.log(maze);
-    }, [mazeSize])
+    }, [maze]);
 
 
     return (
         <div className='maze_container'>
-            {maze.map((row, i) => (
+            {array2D.map((row, i) => (
                 (
                     <div key={i}>
                         {row.map((cell, j) => {
