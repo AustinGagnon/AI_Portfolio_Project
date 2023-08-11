@@ -11,6 +11,9 @@ import JavaScript_Lightning1 from '../assets/ProjectAssets/JavaScript/Lightning1
 import JavaScript_Lightning2 from '../assets/ProjectAssets/JavaScript/Lightning2.png';
 import JavaScript_Lightning3 from '../assets/ProjectAssets/JavaScript/Lightning3.png';
 
+import Desert_White from '../assets/404/Desert_White.png';
+
+
 import Python_MNIST from '../assets/ProjectAssets/Python/Python_MNIST.png';
 
 export const getAsset = (assetName: string) => {
@@ -39,6 +42,8 @@ export const getAsset = (assetName: string) => {
             return JavaScript_LavaLamp4;
         case 'Python_MNIST':
             return Python_MNIST;
+        case 'Desert_White':
+            return Desert_White;
         default:
             return null;
     }

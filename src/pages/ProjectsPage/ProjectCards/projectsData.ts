@@ -53,51 +53,30 @@ export const allProjects: ProjectsData = {
 
     Java: [
         {   id: 1, 
-            title: 'Java', 
-            description: ['This is a Java project.'] },
-
-        {   id: 2, 
-            title: 'Java', 
-            description: ['This is a Java project.'] },
+            title: 'More projects coming soon...',
+        }
     ],
 
     'C#': [
         {   id: 1, 
-            title: 'C#', 
-            description: ['This is a C# project.'] },
+            title: 'More projects coming soon...',
+        },
     ],
 
     'Node.JS': [
         {   id: 1, 
-            title: 'Node.JS', 
-            description: ['This is a Node.JS project.'] },
-        {   id: 2, 
-            title: 'Node.JS', 
-            description: ['This is a Node.JS project.'] },
-        {   id: 3, 
-            title: 'Node.JS', 
-            description: ['This is a Node.JS project.'] },
-        {   id: 4, 
-            title: 'Node.JS', 
-            description: ['This is a Node.JS project.'] },
+            title: 'More projects coming soon...',
+        },
     ],
 
     Firebase: [
         {   id: 1, 
-            title: 'Firebase', 
-            description: ['This is a Firebase project.'] },
+            title: 'More projects coming soon...' },
     ],
 
     '.NET Framework': [
         {   id: 1, 
-            title: '.NET Framework', 
-            description: ['This is a .NET Framework project.'] },
-    ],
-    
-    Projects: [
-        {   id: 1, 
-            title: 'My Journey into programming', 
-            description: ['This is a .NET Framework project.'] },
+            title: 'More projects coming soon...' },
     ],
 };
 

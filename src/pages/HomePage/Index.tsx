@@ -13,7 +13,7 @@ const HomePage: React.FC = () => {
     return (
         <div className={`homePage ${animate ? 'animate' : ''}`}>
             <div className='contentContainer'>
-                <h1>Thanks for visiting my site.</h1>
+                <h1>Thank you for visiting my site.</h1>
                 <h1>It's currently under construction.</h1>
                 <a href="/Projects"><h1>Click to see my projects.</h1></a>
             </div>
