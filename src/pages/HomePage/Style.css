@@ -1,48 +1,44 @@
-/* Base styles */
 .homePage {
     width: 100%;
-    height: 400px;
+    height: 1000px;
     display: grid;
-    grid-template-columns: 1fr 1.2fr 1fr;
-    padding: 100px 0px;
-    overflow: hidden;
-    /* Hide overflow for animation */
+    grid-template-columns: 1fr 3fr 1fr;
 }
 
-.contentContainer {
+.projectsButton {
     grid-column: 2;
-    width: fit-content;
+    width: 70px;
+    height: 70px;
     margin: auto;
-    height: 100%;
-    opacity: 0;
-    /* Start with 0 opacity for animation */
-    transform: translateY(20px);
-    /* Move content down initially */
-    transition: opacity 0.6s ease, transform 0.6s ease;
-    /* Animation transition */
 }
 
-.projectLink {
-    color: var(--div-text-color);
-    text-decoration-color: var(--div-text-color);
-    transition: color 0.3s ease;
+
+.welcomeTitle {
+    grid-column: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200px;
+    font-size: 2em;
+    margin: 25px 0px;
+
 }
 
-.projectLink:hover {
-    color: rgb(18, 18, 54);
-    text-decoration: solid underline blue;
-    transition: color 1s ease, text-decoration-color 1s ease;
-}
-
-/* Animation when content becomes visible */
-.homePage.animate .contentContainer {
+.welcomeTitle.show {
     opacity: 1;
-    transform: translateY(0);
+    transition: opacity 2s ease-in-out;
 }
 
-@media screen and (max-width: 1200px) {
+.welcomeTitle.hidden {
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+
+@media screen and (max-width: 850px) {
     .homePage {
-        padding: 40px;
-        grid-template-columns: 1fr 20fr 1fr;
+        width: 100%;
     }
 }
+    
+

@@ -5,7 +5,7 @@ import './MazeStyle.css';
 const Maze: React.FC = () => {
     const [maze] = useState<MazeLib>(new MazeLib(15, 15));
     const [array2D] = useState<number[][]>(maze.getMaze());
-    const [step, setStep] = useState<number>(0);
+    // const [step, setStep] = useState<number>(0);
 
     useEffect(() => {
         maze.drawMaze();

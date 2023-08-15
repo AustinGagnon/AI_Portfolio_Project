@@ -1,25 +1,36 @@
 import React, { useState, useEffect } from 'react';
-import './Style.css'
+import './Style.css';
 
 const HomePage: React.FC = () => {
-    const [animate, setAnimate] = useState(false);
+    const thingsToDisplay = [
+        "Welcome!",
+        "Thank you for visiting my site.",
+        "Please feel free to have a look around!",
+    ];
+    const [show, setShow] = useState(true);
+    const [index, setIndex] = useState(0);
 
     useEffect(() => {
-        setTimeout(() => {
-            setAnimate(true);
-        }, 200);
-    }, []);
+        const timer = setTimeout(() => {
+            setShow(false);
+            setTimeout(() => {
+                setIndex((index + 1) % thingsToDisplay.length);
+                setShow(true);
+            }, 1000);
+        }, 3000);
+        return () => clearTimeout(timer);
+    }, [index]);
+
+       
 
     return (
-        <div className={`homePage ${animate ? 'animate' : ''}`}>
-            <div className='contentContainer'>
-                <h1>Thank you for visiting my site.</h1>
-                <h1>It's currently under construction.</h1>
-                <a className='projectLink'  href="/Projects"><h1 >Click to see my projects.</h1></a>
+        <div className='homePage'>
+            <div className={`welcomeTitle ${show ? 'show' : 'hidden'}`}>
+                <h3 className='text'>{thingsToDisplay[index]} </h3>               
             </div>
+            <button className='projectsButton'>Projects</button>
         </div>
     );
-}
+};
 
 export default HomePage;
-
