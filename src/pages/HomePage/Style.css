@@ -60,6 +60,10 @@
 }
 
 .projectsButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
     width: 170px;
     height: 70px;
     margin: 50px auto;
@@ -67,7 +71,7 @@
     box-shadow: 1px 2px 5px var(--shadow-color);
     border: 1px solid rgba(80, 80, 80,.3);
     background-color: rgba(255, 255, 255, 0.01);
-    font-size: 1.2em;
+    font-size: 1.3em;
     font-weight: bold;
     color: rgba(255, 255, 255, 0.3);
 }

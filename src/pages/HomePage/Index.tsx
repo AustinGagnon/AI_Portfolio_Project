@@ -46,7 +46,7 @@ const HomePage: React.FC = () => {
                     ))}
                 </div>
 
-                <a href="/projects"><button className='projectsButton'>Projects</button></a>
+                <a href="/projects" className='projectsButton'>Projects</a>
             </div>
         </div>
     );
