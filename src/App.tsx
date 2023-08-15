@@ -1,7 +1,7 @@
 // import { useState } from 'react'
 // import React from 'react';
 import Header from './components/Header/Header'
-import ToggleDarkMode from './components/ToggleDarkMode/ToggleDarkMode';
+// import ToggleDarkMode from './components/ToggleDarkMode/ToggleDarkMode';
 import HomePage from './pages/HomePage/Index';
 import BioPage from './pages/BioPage/Index';
 import ProjectsPage from './pages/ProjectsPage/Index';
@@ -18,7 +18,7 @@ const App: React.FC<AppProps> = (props)=> {
     
     <div className='mainContainer'>
       <Header/>
-      <ToggleDarkMode />
+      {/* <ToggleDarkMode /> */}
       {props.pageName === "Home" && <HomePage />}
       {props.pageName === "Projects" && <ProjectsPage />}
       {props.pageName === "Bio" && <BioPage />}

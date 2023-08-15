@@ -5,16 +5,25 @@ header {
     width: 100%;
     padding: 0px 0px;
     background-color: var(--div-color);
-    box-shadow: 0px 6px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 3px var(--shadow-color);
     transition: background-color 0.3s ease;
+    border-bottom: 1px solid rgba(80, 80, 80, .4);
 }
 
 .title {
     text-decoration: none;
     color: var(--div-text-color);
+    color: orange;
 }
 
-/* Navigation Styles */
+.title h1 {
+    font-size: 2em;
+    margin: 10px 35px;
+    transition: color 0.3s ease;
+}
+
+
+
 nav {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -37,7 +46,7 @@ nav a {
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
+    border-radius: 5px;
     color: black;
     font-weight: bold;
 
@@ -94,14 +103,14 @@ nav a:active {
 
     nav {
         background-color: #111;
-        padding: 10px 0px;
+        padding: 0px 0px;
         margin: 0px 0px;
     }
 
     nav a {
         padding: 0px 10px;
         width: 100%;
-        padding: 0px;
+        padding: 5px 0px;
         margin: 0px;
     }
 }
