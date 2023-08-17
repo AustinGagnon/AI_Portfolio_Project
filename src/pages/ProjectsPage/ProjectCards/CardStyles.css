@@ -42,3 +42,14 @@
     margin: auto;
     width: 35px
 }
+
+.techHeader {
+    margin: 5px 0px;
+    text-decoration: solid underline;
+}
+
+.techList {
+    margin: 0px;
+    list-style: square;
+    padding-left: 20px;
+}

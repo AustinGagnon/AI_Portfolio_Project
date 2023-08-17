@@ -13,8 +13,11 @@ import JavaScript_Lightning3 from '../assets/ProjectAssets/JavaScript/Lightning3
 
 import Desert_White from '../assets/404/Desert_White.png';
 
-
 import Python_MNIST from '../assets/ProjectAssets/Python/Python_MNIST.png';
+import BookStore_POST from '../assets/ProjectAssets/Python/BookStore_POST.png';
+
+import ChessBoard from '../assets/ProjectAssets/CSharp/ChessBoard.png';
+import ChessLaunch from '../assets/ProjectAssets/CSharp/ChessLaunch.png';
 
 export const getAsset = (assetName: string) => {
     switch (assetName) {
@@ -42,6 +45,15 @@ export const getAsset = (assetName: string) => {
             return JavaScript_LavaLamp4;
         case 'Python_MNIST':
             return Python_MNIST;
+        case 'BookStore_POST':
+            return BookStore_POST;
+
+        case 'ChessBoard':
+            console.log('ChessBoard')
+            return ChessBoard;
+        case 'ChessLaunch':
+            return ChessLaunch;
+
         case 'Desert_White':
             return Desert_White;
         default:

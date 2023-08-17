@@ -5,6 +5,7 @@ export interface Project {
     images?: string[];
     githubURL?: string;
     year?: number;
+    technologies?: string[];
     noContent?: string;
 
 }

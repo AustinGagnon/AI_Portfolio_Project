@@ -33,33 +33,54 @@ export const allProjects: ProjectsData = {
     ],
 
     Python: [
-        {
-            id: 1,
-            description: ['When I first dipped my toes into Python, I was immediately struck by its simplicity and readability. '
-                + 'Understanding data types, control flow, and functions laid the foundation for my journey.'
-                + " As I became more comfortable with Python's core syntax, I started exploring object-oriented programming (OOP). Classes, "
-                + 'objects, inheritance, and polymorphism '
-                + "opened up a whole new world of possibilities. Creating modular and reusable code became second nature, and I began designing"
-                + " more complex applications with ease."],
-        },
 
         {
-            id: 2,
+            id: 1,
             title: 'Multilayered Perceptron',
             description: ['This is a Python project.'],
             images: ['Python_MNIST']
         },
+        {
+            id: 2,
+            title: 'FIU Senior Software Engineering - Bookstore API',
+            description: [
+                'Worked with a team of 5 to develop a RESTful API for a bookstore using the Flask REST Framework. '
+                + 'I designed and implemented the user ratings and reviews feature, which allows users to rate and review books. '
+                + 'We used the MVC design pattern to separate the business logic from the presentation layer. ' 
+                + 'All data is stored in a postgreSQL database, and we used SQLAlchemy to interact with the database. '
+                + 'We used Postman to test the API endpoints and ensure that the API is working as expected. ',
+            ],
+            images: ['BookStore_POST'],
+            technologies: ['Python', 'Flask', 'Flask REST Framework', 'postgreSQL', 'SQLAlchemy', 'Postman', 'MVC design pattern'],
+
+
+        }
     ],
 
     Java: [
         {   id: 1, 
-            title: 'More projects coming soon...',
+            title: 'Object Oriented Programming',
+            description: ['Object Oriented Programming was one of the first programming courses I took at university. I remember spending the semester learning ' 
+                        + 'the fundamentals of object-oriented programming (OOP) in Java. '
+                        + 'I learned about classes, objects, inheritance, polymorphism, and more. And we built a few small projects along the way. ']
+
         }
     ],
 
     'C#': [
         {   id: 1, 
-            title: 'More projects coming soon...',
+            title: 'Chess Game',
+            description: ['As part of my Advanced Windows programming course, we developed a chess game in C# using the Windows Forms Framework. '
+                            + 'The game features a fully functional chess board with all the rules of chess implemented. '
+                            + 'The game features two-player gameplay, with mechanics such as piece movement, capturing, and checking implemented. '
+                            + 'The game also features a timer that keeps track of the time each player has left. ',
+                            'I learned a lot about the Windows Forms Framework and the C# programming language while working on this project such as '
+                            + 'how to create a GUI, how to handle user input, and how to implement game logic. '
+                            + 'I also learned about the Model-View-Controller (MVC) design pattern and how to apply it to my projects. '
+                            + 'Overall, this project was a great way to learn about the Windows Forms Framework and the C# programming language. '
+
+                        ],
+            images: ['ChessBoard', 'ChessLaunch']
         },
     ],
 

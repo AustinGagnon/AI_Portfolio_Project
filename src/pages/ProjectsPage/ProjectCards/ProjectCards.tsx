@@ -1,8 +1,8 @@
 import React from 'react';
 import { useEffect } from 'react';
 import SubCard from './SubCard';
-import { getProjectsByLanguage } from './projectsData';
-import { Project } from './types';
+import { getProjectsByLanguage } from '../ProjectData/projectsData';
+import { Project } from '../ProjectData/types';
 import './CardStyles.css';
 
 interface ProjectCardsProps {

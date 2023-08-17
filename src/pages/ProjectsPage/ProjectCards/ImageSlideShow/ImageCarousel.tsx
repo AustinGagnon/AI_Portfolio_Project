@@ -1,5 +1,5 @@
 // ImageCarousel.js
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {getAsset} from '../../../../utils/GetAssets';
 import './ImageCarouselStyle.css';
 
@@ -13,6 +13,10 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
     const nextImage = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
     };
+
+    useEffect(() => {
+        setCurrentIndex(0);
+    }, [images]);
 
     return (
         <>

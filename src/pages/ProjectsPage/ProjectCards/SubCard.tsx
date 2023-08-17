@@ -1,5 +1,5 @@
 import React from 'react';
-import {Project} from './types';
+import {Project} from '../ProjectData/types';
 import ImageCarousel from './ImageSlideShow/ImageCarousel';
 import GitHubImg from '../../../assets/LanguageLogos/GitHub.png'
 import Desert_White from '../../../assets/404/Desert_White.png'
@@ -25,6 +25,8 @@ const SubCard: React.FC<SubCardProps> = (props) => {
             {project.description && project.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
             {/* { project.githubURL && <a href={project.githubURL} target="_blank">Open in Github</a>} */}
             {project.githubURL && <a className="gitHubBG" href={project.githubURL} target="_blank"><img src={GitHubImg}></img></a>}
+            {project.technologies && <div><h3 className='techHeader'>Technologies</h3><ul className='techList'>{project.technologies.map((tech: string, index: number) => <li key={index}>{tech}</li>)}</ul></div>}
+
         </div>
     );
 };
