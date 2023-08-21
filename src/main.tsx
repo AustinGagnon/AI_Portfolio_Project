@@ -22,17 +22,17 @@ const router = createBrowserRouter([
     element: <App pageName='Projects' />,
   },
   {
-    path: "/favicon.ico",
-    element: <App pageName='Home' />,
-  },
-  {
     path: "/bio",
     element: <App pageName='Bio' />,
   },
   {
     path: "/game",
     element: <App pageName='Game' />,
-  }
+  },
+  {
+    path: "/favicon.ico",
+    element: <App pageName='Home' />,
+  },
 ]);
 
 

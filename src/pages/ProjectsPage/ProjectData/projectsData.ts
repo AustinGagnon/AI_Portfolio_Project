@@ -37,7 +37,11 @@ export const allProjects: ProjectsData = {
         {
             id: 1,
             title: 'Multilayered Perceptron',
-            description: ['This is a Python project.'],
+            description: [
+                'During my Data Mining course at Florida International University, we extensively study various neural network types, starting with the fundamental perceptron. Seeking to expand my knowledge, I undertook the challenge of crafting a multilayer perceptron using Python and NumPy. This self-built model aimed to proficiently recognize handwritten digits, a task famously associated with the MNIST dataset. I successfully implemented both ReLU-activated forward propagation and gradient descent-based backward propagation.',
+                'Utilizing the MNIST dataset for training and testing, the model achieved an impressive 97% accuracy on the test set, all achieved without the incorporation of convolutional layers.',
+                "This practical undertaking significantly enhanced my comprehension of pivotal machine learning concepts, encompassing elements like weights, biases, activation functions that introduce non-linearity, and the indispensable impact of learning rate and epochs on the model's behavior."
+            ],
             images: ['Python_MNIST']
         },
         {
