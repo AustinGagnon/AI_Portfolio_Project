@@ -1,28 +1,23 @@
 // import Maze from './Maze/Maze'
 // import { useState } from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import CA_CONTROLLER from './CA_ENV'
 import './CA_Style.css'
 
-const row = 100;
+const row = 150;
 const width = 600;
 const height = 600;
 const id = "ca_env";
+const activaiton = "none"
 
 const CA_Component = () => {
-    const [env] = useState(new CA_CONTROLLER(row, width, height, id));
+    const [env] = useState(new CA_CONTROLLER(row, width, height, id, activaiton));
     const [filter, setLocalFilter] = useState([['-0.3', '0.5', '0.5'], ['-0.9', '1', '0.1'], ['0.9', '0.7', '-0.5']]);
     // const [playState, setPlayState] = useState(false);
 
-    useEffect(() => {
-        document.getElementsByClassName
-    }, []);
 
     const play = () => {
-        // setPlayState(false);
         env.ca.stop();
-
-        // setPlayState(true);
         env.resetCA();
         env.ca.setFilter(filter);
         env.ca.initCanvas();
@@ -32,7 +27,11 @@ const CA_Component = () => {
         const tempFilter = env.getRandomFilter();
         console.log(tempFilter);
         setLocalFilter(tempFilter.map((row) => row.map((col) => col.toString())));
-        play();
+        
+        env.ca.stop();
+        env.resetCA();
+        env.ca.setFilter(filter);
+        env.ca.initCanvas();
     };
 
     const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +48,7 @@ const CA_Component = () => {
         <div className='grid_container'>
             <canvas id='ca_env'></canvas>
             <div className='control_interface'>
-                <button onClick={play}>Play</button>
+                <button onClick={play}>Reset</button>
                 {/* {playState ? <button onClick={stop}>Stop</button> : <button onClick={play}>Play</button>} */}
                 <div className='filter_controls'>
                     <input type="text" id="00" onChange={handleFilterChange} value={filter[0][0]}/>

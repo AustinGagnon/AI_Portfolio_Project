@@ -8,18 +8,20 @@ class CA_CONTROLLER {
     private height: number;
     private canvasID: string;
     private filter: number[][] = [[0, 1, 0], [1, 0, 1], [0, 1, 0]]; 
+    private activationType: string;
 
-    public constructor(row: number, width: number, height: number, canvasID: string) {
+    public constructor(row: number, width: number, height: number, canvasID: string, activationType?: string) {
         this.row = row;
         this.width = width;
         this.height = height;
         this.canvasID = canvasID;
+        this.activationType = activationType ? activationType : 'none';
 
-        this.ca = new CA(row, width, height, canvasID, this.filter);
+        this.ca = new CA(row, width, height, canvasID, this.activationType, this.filter);
     }
 
     public resetCA() {
-        this.ca = new CA(this.row, this.width, this.height, this.canvasID);
+        this.ca = new CA(this.row, this.width, this.height, this.canvasID, this.activationType);
     }
 
     public resetCANEW(row: number, width: number, height: number, canvasID: string) {
@@ -28,7 +30,7 @@ class CA_CONTROLLER {
         this.height = height;
         this.canvasID = canvasID;
 
-        this.ca = new CA(row, width, height, canvasID);
+        this.ca = new CA(row, width, height, canvasID, this.activationType, this.filter);
     }
 
     public getRandomFilter() {
@@ -58,8 +60,9 @@ class CA {
     private offsetY : number;
     private playState : boolean = true;
     private filter: number [][]
+    private activationType: string;
 
-    public constructor(row: number, width: number, height: number, canvasID: string, filter?: number[][]) {
+    public constructor(row: number, width: number, height: number, canvasID: string, activationType: string, filter?: number[][]) {
         this.grid = [];
         this.row = row;
         this.col = Math.floor(row * (width / height));
@@ -68,6 +71,7 @@ class CA {
         this.canvasID = canvasID;
         this.offsetX = this.width / this.col;
         this.offsetY = this.height / this.row;
+        this.activationType = activationType;
         this.filter = filter ? filter : [[0, 1, 0], [1, 0, 1], [0, 1, 0]];
         this.initGrid();
     }
@@ -115,7 +119,6 @@ class CA {
     public initCanvas() {
         this.canvas = document.getElementById(this.canvasID) as HTMLCanvasElement;
         if (this.canvas) {
-            // this.tensorA = tf.tensor(this.grid);
             this.ctx = this.canvas.getContext('2d') as CanvasRenderingContext2D;
             this.canvas.width = this.width;
             this.canvas.height = this.height;
@@ -139,7 +142,7 @@ class CA {
             requestAnimationFrame(() => {
                 setTimeout(() => {
                     this.maskPass();
-                    this.drawMap();
+                    this.activationPass(this.activationType);
                     this.drawMap();
                     this.play();
                 }, 1000 / 30);
@@ -147,6 +150,31 @@ class CA {
             });
         }
         
+    }
+
+    private activationPass(activation: string) {
+        for (let i = 0; i < this.col; i++) {
+            for (let j = 0; j < this.row; j++) {
+                if (activation === 'none') {
+                    continue;
+                }
+                else if (activation === 'sigmoid') {
+                    this.grid[i][j][1] = this.sigmoid(this.grid[i][j][1]);
+                }
+                else if (activation === 'relu') {
+                    this.grid[i][j][1] = this.relu(this.grid[i][j][1]);
+                }
+
+            }
+       }
+    }
+
+    private relu(z: number) {
+        return Math.max(0, z);
+    }
+
+    private sigmoid(z: number) {
+        return 1 / (1 + Math.exp(-z));
     }
 
     private maskPass() {
