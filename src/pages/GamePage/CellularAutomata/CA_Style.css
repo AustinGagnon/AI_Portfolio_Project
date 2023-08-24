@@ -1,0 +1,21 @@
+.grid_container {
+    display: flex;
+    flex-direction: row;
+    
+}
+
+#ca_env {
+    /* width: 500px;
+    height: 500px; */
+    background-color: seagreen;
+}
+
+.grid_cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* background-color: green; */
+    width: 5px;
+    height: 5px;
+}
