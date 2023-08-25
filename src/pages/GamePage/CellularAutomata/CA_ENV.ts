@@ -21,7 +21,17 @@ class CA_CONTROLLER {
     }
 
     public resetCA() {
-        this.ca = new CA(this.row, this.width, this.height, this.canvasID, this.activationType);
+        this.ca = new CA(this.row, this.width, this.height, this.canvasID, this.activationType, this.filter);
+    }
+
+    public setFilter(filterRef: string[][]) {
+        for (let i = 0; i < this.filter.length; i++) {
+            for (let j = 0; j < this.filter[i].length; j++) {
+                if (!isNaN((parseFloat(filterRef[i][j])))) {
+                    this.filter[i][j] = parseFloat(filterRef[i][j]);
+                }
+            }
+        }
     }
 
     public resetCANEW(row: number, width: number, height: number, canvasID: string) {
@@ -98,15 +108,15 @@ class CA {
         }
     }
 
-    public setFilter(filterRef: string[][]) {
-        for (let i = 0; i < this.filter.length; i++) {
-            for (let j = 0; j < this.filter[i].length; j++) {
-                if (!isNaN((parseFloat(filterRef[i][j])))) {
-                    this.filter[i][j] = parseFloat(filterRef[i][j]);
-                }
-            }
-        }
-    }
+    // public setFilter(filterRef: string[][]) {
+    //     for (let i = 0; i < this.filter.length; i++) {
+    //         for (let j = 0; j < this.filter[i].length; j++) {
+    //             if (!isNaN((parseFloat(filterRef[i][j])))) {
+    //                 this.filter[i][j] = parseFloat(filterRef[i][j]);
+    //             }
+    //         }
+    //     }
+    // }
 
     public getFilter() {
         return this.filter;
@@ -124,7 +134,6 @@ class CA {
             this.canvas.height = this.height;
             this.playState = true;
             this.drawMap();
-            this.play();
             return true;
         }
         return false;
@@ -136,7 +145,7 @@ class CA {
 
     public play() {
         if (!this.playState) {
-            console.log('stop');
+            console.log('stopped');
         }
         else {
             requestAnimationFrame(() => {

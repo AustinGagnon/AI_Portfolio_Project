@@ -1,6 +1,6 @@
 // import Maze from './Maze/Maze'
 // import { useState } from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import CA_CONTROLLER from './CA_ENV'
 import './CA_Style.css'
 
@@ -13,25 +13,24 @@ const activaiton = "none"
 const CA_Component = () => {
     const [env] = useState(new CA_CONTROLLER(row, width, height, id, activaiton));
     const [filter, setLocalFilter] = useState([['-0.3', '0.5', '0.5'], ['-0.9', '1', '0.1'], ['0.9', '0.7', '-0.5']]);
-    // const [playState, setPlayState] = useState(false);
 
 
     const play = () => {
         env.ca.stop();
+        // env.setFilter(filter);
         env.resetCA();
-        env.ca.setFilter(filter);
         env.ca.initCanvas();
+        env.ca.play();
     };
 
     const randomize = () => {
-        const tempFilter = env.getRandomFilter();
-        console.log(tempFilter);
-        setLocalFilter(tempFilter.map((row) => row.map((col) => col.toString())));
-        
-        env.ca.stop();
-        env.resetCA();
-        env.ca.setFilter(filter);
-        env.ca.initCanvas();
+            env.ca.stop();
+            const newFilter = env.getRandomFilter();
+            env.setFilter([...newFilter.map((row: number[]) => row.map((col: number) => col.toString()))])
+            setLocalFilter([...newFilter.map((row: number[]) => row.map((col: number) => col.toString()))]);
+            env.resetCA();
+            env.ca.initCanvas();
+            env.ca.play();
     };
 
     const handleFilterChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -49,7 +48,6 @@ const CA_Component = () => {
             <h1>Cellular Automata</h1>
             <canvas id='ca_env'></canvas>
             <div className='control_interface'>
-                {/* {playState ? <button onClick={stop}>Stop</button> : <button onClick={play}>Play</button>} */}
                 <div className='filter_controls'>
                     <input type="text" id="00" onChange={handleFilterChange} value={filter[0][0]}/>
                     <input type="text" id="01" onChange={handleFilterChange} value={filter[0][1]}/>
@@ -74,9 +72,9 @@ const CA_Component = () => {
 
                 Viewer discretion is advised, especially for users who are sensitive to flashing lights. If you have a history of epilepsy or are prone to seizures, please refrain from using this website or consult with a medical professional before proceeding.
 
-                By pressing "Play" or interacting with the content on this website, you acknowledge that you have read and understood this epilepsy warning and assume all associated risks. If you experience any discomfort, dizziness, or other adverse reactions while using this website, immediately stop and consult a medical professional.
+                By pressing "Randomize" or interacting with the content on this website, you acknowledge that you have read and understood this epilepsy warning and assume all associated risks. If you experience any discomfort, dizziness, or other adverse reactions while using this website, immediately stop and consult a medical professional.
 
-                If you agree to proceed and are comfortable with the potential risks, you can press "Play" to access the content.</p>
+                If you agree to proceed and are comfortable with the potential risks, you can press "Randomize" to access the content.</p>
         </div>
     );             
 };
