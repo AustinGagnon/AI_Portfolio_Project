@@ -46,9 +46,9 @@ const CA_Component = () => {
 
     return (
         <div className='grid_container'>
+            <h1>Cellular Automata</h1>
             <canvas id='ca_env'></canvas>
             <div className='control_interface'>
-                <button onClick={play}>Reset</button>
                 {/* {playState ? <button onClick={stop}>Stop</button> : <button onClick={play}>Play</button>} */}
                 <div className='filter_controls'>
                     <input type="text" id="00" onChange={handleFilterChange} value={filter[0][0]}/>
@@ -61,7 +61,12 @@ const CA_Component = () => {
                     <input type="text" id="21" onChange={handleFilterChange} value={filter[2][1]}/>
                     <input type="text" id="22" onChange={handleFilterChange} value={filter[2][2]}/>
                 </div>
-                <button onClick={randomize}>Ranomize</button>
+                <div className="button_interface">
+                    <button id='rndm_btn' onClick={randomize}>Randomize</button>
+                    <button onClick={play}>Reset</button>
+                </div>
+                
+
             </div>
             <p><b>Epilepsy Warning: Flashing Lights </b></p>
 

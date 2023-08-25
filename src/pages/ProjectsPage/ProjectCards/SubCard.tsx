@@ -23,9 +23,8 @@ const SubCard: React.FC<SubCardProps> = (props) => {
             {project.title && <h2 className='projectTitle'>{project.title}</h2>}
             {project.year && <h4 className='projectYear'>Project year: {project.year}</h4>}
             {project.description && project.description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
-            {/* { project.githubURL && <a href={project.githubURL} target="_blank">Open in Github</a>} */}
-            {project.githubURL && <a className="gitHubBG" href={project.githubURL} target="_blank"><img src={GitHubImg}></img></a>}
             {project.technologies && <div><h3 className='techHeader'>Technologies</h3><ul className='techList'>{project.technologies.map((tech: string, index: number) => <li key={index}>{tech}</li>)}</ul></div>}
+            {project.githubURL && <a className="gitHubBG" href={project.githubURL} target="_blank"><img src={GitHubImg}></img></a>}
 
         </div>
     );

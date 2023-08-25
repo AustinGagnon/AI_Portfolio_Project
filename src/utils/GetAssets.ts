@@ -18,9 +18,25 @@ import BookStore_POST from '../assets/ProjectAssets/Python/BookStore_POST.png';
 
 import ChessBoard from '../assets/ProjectAssets/CSharp/ChessBoard.png';
 import ChessLaunch from '../assets/ProjectAssets/CSharp/ChessLaunch.png';
+import ChessGame1 from '../assets/ProjectAssets/CSharp/ChessGame1.png';
+
+import CA_1 from '../assets/ProjectAssets/JavaScript/CA_1.png';
+import CA_2 from '../assets/ProjectAssets/JavaScript/CA_2.png';
+import CA_3 from '../assets/ProjectAssets/JavaScript/CA_3.png';
+import CA_4 from '../assets/ProjectAssets/JavaScript/CA_4.png';
 
 export const getAsset = (assetName: string) => {
     switch (assetName) {
+
+        case 'CA_1':
+            return CA_1;
+        case 'CA_2':
+            return CA_2;
+        case 'CA_3':
+            return CA_3;
+        case 'CA_4':
+            return CA_4;
+        
         case 'JavaScript_Maze1':
             return JavaScript_Maze1;
         case 'JavaScript_Maze2':
@@ -53,6 +69,8 @@ export const getAsset = (assetName: string) => {
             return ChessBoard;
         case 'ChessLaunch':
             return ChessLaunch;
+        case 'ChessGame1':
+            return ChessGame1;
 
         case 'Desert_White':
             return Desert_White;
