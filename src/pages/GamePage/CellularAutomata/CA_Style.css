@@ -67,12 +67,5 @@
     text-align: center;
 }
 
-@media screen and (max-width: 800px) {
-    
-
-    .control_interface {
-        justify-content: space-around;
-    }
-}
     
 
