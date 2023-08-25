@@ -62,18 +62,18 @@
     height: 5px;
 }
 
-@media screen and (max-width: 800px) {
-    h1 {
-        text-align: center;
-    }
+.grid_container h1 {
+    text-align: center;
+}
 
+@media screen and (max-width: 800px) {
     .grid_container {
         width: 100%;
     }
 
     .control_interface {
-        justify-content: space-between;
+        justify-content: space-around;
     }
 }
     
-}
+
