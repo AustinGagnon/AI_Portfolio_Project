@@ -1,6 +1,6 @@
 // import Maze from './Maze/Maze'
 // import { useState } from 'react'
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import CA_CONTROLLER from './CA_ENV'
 import './CA_Style.css'
 
