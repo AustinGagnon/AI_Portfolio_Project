@@ -1,5 +1,3 @@
-// import Maze from './Maze/Maze'
-// import { useState } from 'react'
 import { useState } from 'react'
 import CA_CONTROLLER from './CA_ENV'
 import './CA_Style.css'
@@ -17,7 +15,6 @@ const CA_Component = () => {
 
     const play = () => {
         env.ca.stop();
-        // env.setFilter(filter);
         env.resetCA();
         env.ca.initCanvas();
         env.ca.play();

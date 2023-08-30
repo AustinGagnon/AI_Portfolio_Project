@@ -10,19 +10,19 @@ const BioPage = () => {
                 <div className='imageContainer'>
                     <img src={profilePic} alt="" />
                 </div>
-                <button className='contactBtn'>Contact Me</button>
+                {/* <button className='contactBtn'>Contact Me</button> */}
                 <div className='bodyText'>
                     <h3>Hi, I'm Austin.</h3>
                     <p>
-                        I'm a computer science graduate with a passion for learning and creating.
+                        I'm a computer science graduate with a passion for learning and making the world a better place through code.
                         I graduated from <a href="https://www.fiu.edu/">Florida International University</a> in
-                        2021 with a BA in Computer Science. I'm interested in web development, machine learning,
+                        2023 with a Bachelor's degree in Computer Science. I'm interested in machine learning, back-end development,
                         and data science.
                     </p>
                     <p>
-                        When I'm not coding, I'm usually spending time with my wife and two kids . I also enjoy playing and writing music and playing games with friends.
+                        When I'm not coding, I'm usually spending time with my wife and kids. I also enjoy practicing guitar, binge watching Netflix, and playing Catan with our friends.
                     </p>
-                    <p>I'm currenty open for a position as a software engineer.</p>
+                    <p>I'm currenty open for a position as a software engineer or related role.</p>
 
                 </div>
                 

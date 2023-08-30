@@ -108,16 +108,6 @@ class CA {
         }
     }
 
-    // public setFilter(filterRef: string[][]) {
-    //     for (let i = 0; i < this.filter.length; i++) {
-    //         for (let j = 0; j < this.filter[i].length; j++) {
-    //             if (!isNaN((parseFloat(filterRef[i][j])))) {
-    //                 this.filter[i][j] = parseFloat(filterRef[i][j]);
-    //             }
-    //         }
-    //     }
-    // }
-
     public getFilter() {
         return this.filter;
     }
